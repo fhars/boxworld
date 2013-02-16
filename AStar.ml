@@ -3,6 +3,7 @@ sig
   type node
   type problem
   type edge
+  val compare_nodes : node -> node -> int
   val edges : node -> problem -> (int * node * edge) list
   val solved : node -> problem -> bool
   val heuristic : node -> problem -> int

@@ -13,6 +13,8 @@ let solved state (_, goal) =
    will construct our problems in a way that it isn't *)
 let heuristic state (_, goal) = State.cardinal (State.diff goal state)
 
+let compare_nodes = State.compare
+
 let substitute binding vars =
   List.map (fun v -> Binding.find v binding) vars
 let instantiate_pattern binding state (Pattern(name, vars)) =

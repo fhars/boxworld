@@ -7,7 +7,7 @@ type node = State.t
 type edge = action * string Binding.t
 
 let solved state (_, goal) =
-  State.subset state goal
+  State.subset goal state
 
 (* This heuristic is in general inadmissible, but we
    will construct our problems in a way that it isn't *)

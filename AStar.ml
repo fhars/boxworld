@@ -11,7 +11,7 @@ end
 
 module Make(G: GraphWithHeuristic) : sig
   val solve : G.node -> G.problem ->
-    (float * G.node * G.edge list * int) option
+    (int * G.node * G.edge list * int) option
 end = struct
 
   let solve _ _ = failwith "Not implemented"

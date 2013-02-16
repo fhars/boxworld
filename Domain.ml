@@ -21,7 +21,7 @@ let instantiate_pattern binding state (Pattern(name, vars)) =
   State.add (Bound(name, substitute binding vars))  state
 let instantiate_action action binding =
   let instantiate = instantiate_pattern binding in
-  let adds = List.fold_left instantiate State.empty action.dels
+  let adds = List.fold_left instantiate State.empty action.adds
   and dels = List.fold_left instantiate State.empty action.dels in
   (adds, dels)
 

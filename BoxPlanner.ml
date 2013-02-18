@@ -141,9 +141,9 @@ let perform state (action, binding) =
     | "pick" -> pick 3
     | "pickbot" -> pick 2
     | "stack" ->
-        (4, (1, Hashtbl.find name_to_ix (Binding.find 2 binding)))
+        (4, (2, Hashtbl.find name_to_ix (Binding.find 2 binding)))
     | "drop" ->
-        (4, (1, -1))
+        (4, (2, -1))
     | _ ->
         failwith "Internal Error"
 

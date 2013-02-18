@@ -12,7 +12,7 @@ the browser will block and maybe warn about a non-responsive
 script. Just be patient and let it run to completion.
 
 The simulation is based on the box2dweb demo code, the planner has
-been written in ocaml(http://www.ocaml.org) for the coursera
+been written in [ocaml](http://www.ocaml.org) for the coursera
 ["Artificial Intellience Planning"
 course](http://www.coursera.org/aiplan). In addition to an ocaml
 compiler you also need [js_of_ocaml](http://ocsigen.org/js_of_ocaml/)

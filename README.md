@@ -11,7 +11,7 @@ confuse it further.  Planning may also take some time, during which
 the browser will block and maybe warn about a non-responsive
 script. Just be patient and let it run to completion.
 
-[View the code running on its github page.](http://fhars.gitbub.com/boxworld/)
+[View the code running on its github page.](http://fhars.github.com/boxworld/)
 
 The simulation is based on the box2dweb demo code, the planner has
 been written in [ocaml](http://www.ocaml.org) for the coursera

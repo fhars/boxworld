@@ -383,9 +383,9 @@ function init() {
 
         if (state == planning) {
             var a = runPlanner(world_state).slice(1);
-            var act = a[0];
-            var res = a[1];
-            action = act.slice(1);
+            var res = a[0];
+            var act = a[1].slice(1);
+            action = act;
             switch_state(res);
         }
         if (state == acting) {

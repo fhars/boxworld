@@ -125,8 +125,8 @@ let reconstruct_state observed_state =
 let replan state =
   debug "Replanning";
   match try Planner.make_plan actions state goal with _ -> None with
-    | Some(_cost, _target, actions, _visited) ->
-        debug "Found new plan";
+    | Some(cost, _target, actions, visited) ->
+        debug "Found new plan wiht cost %d (Visited nodes: %d)" cost visited;
         next_actions := actions
     | None ->
         debug "Found no plan";

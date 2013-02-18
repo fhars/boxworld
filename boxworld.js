@@ -108,12 +108,12 @@ function init() {
                 Math.random() * 9 + 2,
                 "Rect4"),
         makesquare(world, fixDef,
-                   Math.random() + 0.8,
+                   0.5 * Math.random() + 0.9,
                    Math.random() * 10,
                    Math.random() * 9 + 2,
                    "Square1"),
         makesquare(world, fixDef,
-                   Math.random() + 0.8,
+                   0.5 * Math.random() + 0.9,
                    Math.random() * 10,
                    Math.random() * 9 + 2,
                    "Square2")
@@ -211,7 +211,6 @@ function init() {
 
     //update
 
-    var done = 0;
     var simulating = 1;
     var planning = 2;
     var done = 3;
@@ -219,6 +218,8 @@ function init() {
     var state = simulating;
     var action = [];
     var was_running = true;
+
+    var statenames = ["", "SIMULATING", "PLANNING", "DONE", "ACTING"];
 
     var null_v = new b2Vec2(0,0);
 
@@ -228,7 +229,7 @@ function init() {
         if (state == simulating) {
             was_running = true;
         }
-        console.log("Switching to state " + state);
+        console.log("Switching to state " + statenames[state]);
     }
 
     var picked = undefined;
@@ -270,9 +271,9 @@ function init() {
         if (targ == -1) {
             if (undefined == t_pos) {
                 if (objs[0].GetWorldCenter().x < 10) {
-                    t_pos = 10.5 + 9 * Math.random();
+                    t_pos = 10.5 + 7.5 * Math.random();
                 } else {
-                    t_pos = 9.5 - 9 * Math.random();
+                    t_pos = 9.5 - 7.5 * Math.random();
                 }
             }
         } else {

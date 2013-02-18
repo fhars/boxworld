@@ -1,6 +1,6 @@
 INTFS = Unifier.cmi 
-OBJS=DomainTypes.cmo Unifier.cmo AStar.cmo Domain.cmo Planner.cmo
-NAME=boxworld
+OBJS=DomainTypes.cmo Unifier.cmo AStar.cmo Domain.cmo Planner.cmo BoxPlanner.cmo
+NAME=BoxPlanner
 OCAMLC=ocamlfind ocamlc -package js_of_ocaml -package js_of_ocaml.syntax -syntax camlp4o
 
 $(NAME).byte: $(INTFS) $(OBJS)

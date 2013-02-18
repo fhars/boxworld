@@ -312,7 +312,8 @@ function init() {
     }
 
     function perform(action) {
-        var [act, targ] = action;
+        var act = action[0];
+        var targ = action[1];
         if (act == 1) { // pick an object up
             if (beam) {
                 drop_object()
@@ -380,9 +381,10 @@ function init() {
         }
 
         if (state == planning) {
-            var [res, act] = runPlanner(world_state).slice(1);
-            action = act.slice(1);
-            switch_state(res);
+            var a = runPlanner(world_state).slice(1);
+            var next_state = a[0];
+            action = a[1].slice(1);
+            switch_state(next_state);
         }
         if (state == acting) {
             perform(action);

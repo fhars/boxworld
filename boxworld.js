@@ -134,7 +134,7 @@ function init() {
     for(var i = 0; i < objs.length; ++i) {
         labels[i] = objs[i].GetUserData();
     }
-    initialize_planner(labels);
+    initializePlanner(labels);
 
     fixDef.density = 500.0;
     fixDef.friction = 0.1;
@@ -379,8 +379,8 @@ function init() {
         }
 
         if (state == planning) {
-            var [res, act] = run_planner(world_state);
-            action = act;
+            var [res, act] = runPlanner(world_state).slice(1);
+            action = act.slice(1);
             switch_state(res);
         }
         if (state == acting) {

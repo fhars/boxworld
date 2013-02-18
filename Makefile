@@ -6,8 +6,8 @@ OCAMLC=ocamlfind ocamlc -package js_of_ocaml -package js_of_ocaml.syntax -syntax
 $(NAME).byte: $(INTFS) $(OBJS)
 	$(OCAMLC) -linkpkg -o $@ $(OBJS)
 
-$(NAME).js: $(NAME).
-	js_of_ocaml $<
+$(NAME).js: $(NAME).byte
+	js_of_ocaml -pretty $<
 
 %.cmo: %.ml
 	$(OCAMLC) -c $<

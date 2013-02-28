@@ -20,5 +20,3 @@ course](https://www.coursera.org/course/aiplan). In addition to an ocaml
 compiler you also need [js_of_ocaml](http://ocsigen.org/js_of_ocaml/)
 to compile it.
 
-Two functions are unimplemented in the published source, I will add
-them after the course deadline is over.
